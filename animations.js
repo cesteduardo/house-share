@@ -43,12 +43,14 @@
   });
   var figuras = Array.prototype.slice.call(doc.querySelectorAll('.js-planta'));
   var palavras = Array.prototype.slice.call(doc.querySelectorAll('.js-n-palavra'));
+  var numeros = Array.prototype.slice.call(doc.querySelectorAll('.js-n-num'));
   function desenharPlanta() {
     if (planta.mostrado === planta.n) return;
     planta.mostrado = planta.n;
     var v = String(planta.n), i;
     for (i = 0; i < figuras.length; i++) figuras[i].setAttribute('data-n', v);
     for (i = 0; i < palavras.length; i++) palavras[i].textContent = PALAVRAS[planta.n];
+    for (i = 0; i < numeros.length; i++) numeros[i].textContent = v;
   }
   function definirPlanta(n) { if (n !== planta.n) { planta.n = n; agendar(SUJO_CASA); } }
 
@@ -205,7 +207,7 @@
         }
       }
       agendar(SUJO_DOCA);
-    }, { rootMargin: '-64px 0px -30% 0px' });
+    }, { rootMargin: '-64px 0px 0px 0px' });
     if (heroi) io.observe(heroi);
     if (secSim) io.observe(secSim);
     if (secLista) io.observe(secLista);
@@ -214,7 +216,9 @@
       for (var i = 0; i < entries.length; i++) {
         if (entries[i].isIntersecting) { entries[i].target.classList.add('is-in'); rio.unobserve(entries[i].target); }
       }
-    }, { rootMargin: '0px 0px -6% 0px' });
+    }, { rootMargin: '0px 0px 12% 0px' });
+    var res = doc.querySelector('.sim__res');
+    if (res) new IntersectionObserver(function (en) { root.classList.toggle('res-visivel', en[0].isIntersecting); }, { rootMargin: '-80px 0px 0px 0px' }).observe(res);
     var rev = doc.querySelectorAll('.revelar');
     for (var j = 0; j < rev.length; j++) rio.observe(rev[j]);
   } else {
