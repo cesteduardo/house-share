@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Casa própria não precisa ser sozinha.">
-<meta property="og:description" content="Encontre pessoas com o mesmo plano, simule a parte de cada um e compre junto, com contrato e escritura.">
+<meta property="og:description" content="Encontre pessoas com o&nbsp;mesmo plano, simule a parte de cada um e compre junto, com contrato e escritura.">
 <meta property="og:url" content="https://cesteduardo.github.io/house-share/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23C2410C'/%3E%3Cpath d='M10 26V14a6 6 0 0 1 12 0v12' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Ccircle cx='19' cy='20' r='1.6' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preload" href="fonts/inter-pt-wght.woff2" as="font" type="font/woff2" crossorigin>
@@ -78,7 +78,7 @@
 <rect class="p-comum p-comum--q4" x="430" y="40" width="130" height="150"/>
 <g class="p-paredes">
 <rect class="p-ext" x="40" y="40" width="520" height="360"/>
-<path class="p-int" d="M170 40v150M300 40v150M430 40v150M40 190h520M40 230h100M140 230v170M40 310h100M270 230v24"/>
+<path class="p-int" d="M170 40v150M300 40v150M430 40v150M40 190h520M40 230h100M140 230v170M40 310h100"/>
 </g>
 <rect class="p-vao" x="56" y="186" width="32" height="8"/>
 <rect class="p-vao" x="82" y="36" width="48" height="8"/>
@@ -237,7 +237,7 @@
     </header>
 
     <div class="sim">
-      <div class="sim__resumo" aria-hidden="true"><span>Sua parte</span> <strong id="rs-entrada">R$&nbsp;40.000</strong> <span>de entrada ·</span> <strong id="rs-parcela">R$&nbsp;1.902</strong><span>/mês</span></div>
+      <div class="sim__resumo" aria-hidden="true"><p><span>Sua entrada</span><strong id="rs-entrada">R$&nbsp;40.000</strong></p><p><span>Sua 1ª parcela</span><strong id="rs-parcela">R$&nbsp;1.902</strong></p></div>
       <form class="cartao sim__form" id="sim-form" novalidate aria-describedby="sim-aviso">
         <div class="campo">
           <div class="campo__topo">
@@ -255,15 +255,16 @@
             <input type="radio" id="sim-n3" name="n" value="3" checked><label for="sim-n3">3</label>
             <input type="radio" id="sim-n4" name="n" value="4"><label for="sim-n4">4</label>
           </div>
+          <div class="sim__planta sim__planta--celular" id="sim-planta-m" aria-hidden="true"></div>
         </fieldset>
 
         <div class="campo">
           <div class="campo__topo">
             <label for="sim-entrada-r">Entrada</label>
-            <span class="campo__num"><input id="sim-entrada" type="text" inputmode="numeric" value="20" aria-label="Entrada, em porcentagem do valor" autocomplete="off" data-key="entrada" data-min="20" data-max="60"><span aria-hidden="true">%</span></span>
+            <span class="campo__num"><input id="sim-entrada" type="text" inputmode="numeric" value="20" aria-label="Entrada, em porcentagem do valor" autocomplete="off" data-key="entrada" data-min="10" data-max="60"><span aria-hidden="true">%</span></span>
           </div>
-          <input class="faixa" id="sim-entrada-r" type="range" min="20" max="60" step="1" value="20" data-key="entrada" style="--p:0%" aria-valuetext="20%">
-          <div class="campo__escala" aria-hidden="true"><span>20%</span><span>60%</span></div>
+          <input class="faixa" id="sim-entrada-r" type="range" min="10" max="60" step="1" value="20" data-key="entrada" style="--p:20%" aria-valuetext="20%">
+          <div class="campo__escala" aria-hidden="true"><span>10%</span><span>60%</span></div>
         </div>
 
         <div class="campo">
@@ -283,7 +284,7 @@
 
       <div class="cartao sim__res" role="region" aria-labelledby="sim-res-titulo">
         <h3 id="sim-res-titulo" class="sr">Resultado da simulação</h3>
-        <div class="sim__planta" id="sim-planta" aria-hidden="true"></div>
+        <div class="sim__planta sim__planta--mesa" id="sim-planta" aria-hidden="true"></div>
         <dl class="kpis">
           <div class="kpi">
             <dt>Entrada por pessoa</dt>
@@ -391,7 +392,7 @@
     <header class="secao__cab revelar">
       <p class="selo selo--claro">Quem já entrou</p>
       <h2 id="prova-titulo">Gente que comprou junto <em>e conta como foi.</em></h2>
-      <p class="contador"><span class="contador__n"><mark class="ph">[DADO A CONFIRMAR]</mark> <strong>lares formados</strong></span> <span>pela Entre</span></p>
+      <p class="contador"><mark class="ph">[DADO A CONFIRMAR]</mark> <strong>lares formados</strong></p>
     </header>
     <ul class="grade grade--3">
       <li class="cartao depo revelar">
@@ -415,7 +416,7 @@
 
 <!-- 8. PERGUNTAS FREQUENTES -->
 <section class="secao" id="perguntas" aria-labelledby="faq-titulo">
-  <div class="wrap wrap--texto">
+  <div class="wrap">
     <header class="secao__cab revelar">
       <p class="selo selo--claro">Perguntas frequentes</p>
       <h2 id="faq-titulo">O que todo mundo pergunta <em>antes de entrar.</em></h2>

@@ -32,14 +32,15 @@
   var planta = { n: 3, mostrado: 3 };
   var figHeroi = doc.querySelector('.js-planta');
   var vaga = byId('sim-planta');
-  if (figHeroi && vaga) {
+  [vaga, byId('sim-planta-m')].forEach(function (alvo) {
+    if (!figHeroi || !alvo) return;
     var copia = figHeroi.cloneNode(true);
     copia.classList.remove('heroi-card__planta');
     var svg = copia.querySelector('svg');
     svg.removeAttribute('role'); svg.removeAttribute('aria-labelledby'); svg.setAttribute('aria-hidden', 'true'); svg.setAttribute('focusable', 'false');
     var t = svg.querySelector('title'); if (t) t.parentNode.removeChild(t);
-    vaga.appendChild(copia);
-  }
+    alvo.appendChild(copia);
+  });
   var figuras = Array.prototype.slice.call(doc.querySelectorAll('.js-planta'));
   var palavras = Array.prototype.slice.call(doc.querySelectorAll('.js-n-palavra'));
   function desenharPlanta() {
@@ -56,7 +57,7 @@
   var INT = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
   var DEC = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 2 });
   var ESCALA = ['', '', 'scaleX(.5)', 'scaleX(.3333)', 'scaleX(.25)'];
-  var LIM = { valor: [200000, 2000000], entrada: [20, 60], prazo: [5, 35] };
+  var LIM = { valor: [200000, 2000000], entrada: [10, 60], prazo: [5, 35] };
   var VT = {
     valor: function (v) { return BRL.format(v); },
     entrada: function (v) { return v + '%'; },
@@ -195,6 +196,7 @@
         var en = entries[i], tg = en.target;
         if (tg === heroi) {
           vis.heroi = en.isIntersecting;
+          root.classList.toggle('passou-heroi', !en.isIntersecting && en.boundingClientRect.top < 0);
         } else if (tg === secSim) {
           vis.sim = en.isIntersecting;
           if (!en.isIntersecting) vis.simPassou = en.boundingClientRect.top < 0;
