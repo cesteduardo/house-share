@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Entre · Casa própria em grupo, com contrato e segurança</title>
+<meta name="description" content="A Entre conecta pessoas com objetivos parecidos para comprar um imóvel juntas, com simulação, contrato de copropriedade e escritura feitos do jeito certo.">
+<link rel="canonical" href="https://cesteduardo.github.io/house-share/">
+<meta name="theme-color" content="#9A3412">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Casa própria não precisa ser sozinha.">
+<meta property="og:description" content="Encontre pessoas com o mesmo plano, simule a parte de cada um e compre junto, com contrato e escritura.">
+<meta property="og:url" content="https://cesteduardo.github.io/house-share/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23C2410C'/%3E%3Cpath d='M10 26V14a6 6 0 0 1 12 0v12' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Ccircle cx='19' cy='20' r='1.6' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/inter-pt-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Dá para financiar com quem não é da família?","acceptedAnswer":{"@type":"Answer","text":"Alguns bancos aceitam compor a renda de pessoas sem parentesco no mesmo financiamento. As regras mudam conforme o banco e a linha de crédito, e a Entre indica, antes de tudo, quais caminhos estão abertos para o seu grupo."}},
+{"@type":"Question","name":"Qual é a diferença entre copropriedade e multipropriedade?","acceptedAnswer":{"@type":"Answer","text":"Na copropriedade, o condomínio voluntário do Código Civil, cada pessoa é dona de uma fração do imóvel inteiro, e o uso é combinado em contrato. Na multipropriedade (Lei 13.777/2018), cada pessoa é dona de um período de tempo, modelo comum em imóveis de férias. A Entre trabalha com a copropriedade, para moradia."}},
+{"@type":"Question","name":"Quanto a Entre cobra, e quando?","acceptedAnswer":{"@type":"Answer","text":"Todos os custos aparecem antes de qualquer compromisso, para que o grupo decida com a conta inteira à vista."}},
+{"@type":"Question","name":"Como dividimos quartos, IPTU e condomínio?","acceptedAnswer":{"@type":"Answer","text":"Tudo fica escrito antes da compra: quem usa cada cômodo, como funcionam as áreas comuns e a proporção das despesas, que pode seguir a fração de cada um ou um acordo diferente, desde que todos assinem."}},
+{"@type":"Question","name":"Quem vê meus dados?","acceptedAnswer":{"@type":"Answer","text":"Seu perfil mostra só o que você escolher. Renda e documentos são compartilhados apenas com o grupo, e apenas quando todos decidirem avançar, conforme a LGPD."}}
+]}
+</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="sentinela" id="sentinela" aria-hidden="true"></div>
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><pattern id="hachura" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#FBF7F3"/><path d="M0 0v9" stroke="#D9CBBE" stroke-width="1.4"/></pattern></defs></svg>
+
+<header class="topo">
+  <div class="topo__in">
+    <a class="marca" href="#topo" aria-label="Entre, página inicial">
+      <svg class="marca__ico" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M10 26V14a6 6 0 0 1 12 0v12"/><circle cx="19" cy="20" r="1.6"/></svg>
+      <span>Entre</span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#seguranca">Segurança</a>
+      <a href="#perguntas">Perguntas</a>
+    </nav>
+    <a class="btn btn--p btn--topo" href="#lista" data-track="cta_header_click">Entrar na lista</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- 1. HERO -->
+<section class="heroi" id="topo" aria-labelledby="heroi-titulo">
+  <div class="wrap">
+    <p class="selo">Copropriedade residencial</p>
+    <h1 id="heroi-titulo">Casa própria <em>não precisa ser sozinha.</em></h1>
+    <p class="heroi__sub">A Entre apresenta você a pessoas com o mesmo plano para comprarem um imóvel juntas, com simulação, contrato e escritura feitos do jeito certo.</p>
+    <div class="heroi__acoes">
+      <a class="btn btn--branco" href="#simulador" data-track="cta_hero_click">Simular minha parte</a>
+      <a class="btn btn--vidro" href="#como-funciona">Como funciona</a>
+    </div>
+
+    <div class="heroi-card">
+      <figure class="heroi-card__planta planta-fig js-planta" data-n="3">
+        <svg class="planta" viewBox="0 0 600 440" role="img" aria-labelledby="planta-titulo">
+<title id="planta-titulo">Planta baixa ilustrativa de um imóvel de 117 m² com quatro quartos: cada quarto pertence a uma pessoa do grupo, e sala, cozinha, banho e serviço são de uso comum.</title>
+<rect class="p-chao" x="40" y="40" width="520" height="360"/>
+<rect class="p-comum" x="40" y="190" width="520" height="40"/>
+<rect class="p-comum" x="270" y="230" width="290" height="170"/>
+<rect class="p-comum" x="140" y="230" width="130" height="170"/>
+<rect class="p-comum" x="40" y="230" width="100" height="80"/>
+<rect class="p-comum" x="40" y="310" width="100" height="90"/>
+<rect class="p-dono d1" x="40" y="40" width="130" height="150"/>
+<rect class="p-dono d2" x="170" y="40" width="130" height="150"/>
+<rect class="p-dono d3" x="300" y="40" width="130" height="150"/>
+<rect class="p-comum p-comum--q3" x="300" y="40" width="130" height="150"/>
+<rect class="p-dono d4" x="430" y="40" width="130" height="150"/>
+<rect class="p-comum p-comum--q4" x="430" y="40" width="130" height="150"/>
+<g class="p-paredes">
+<rect class="p-ext" x="40" y="40" width="520" height="360"/>
+<path class="p-int" d="M170 40v150M300 40v150M430 40v150M40 190h520M40 230h100M140 230v170M40 310h100M270 230v24"/>
+</g>
+<rect class="p-vao" x="56" y="186" width="32" height="8"/>
+<rect class="p-vao" x="82" y="36" width="48" height="8"/>
+<rect class="p-vao" x="186" y="186" width="32" height="8"/>
+<rect class="p-vao" x="212" y="36" width="48" height="8"/>
+<rect class="p-vao" x="316" y="186" width="32" height="8"/>
+<rect class="p-vao" x="342" y="36" width="48" height="8"/>
+<rect class="p-vao" x="446" y="186" width="32" height="8"/>
+<rect class="p-vao" x="472" y="36" width="48" height="8"/>
+<rect class="p-vao" x="60" y="226" width="32" height="8"/>
+<rect class="p-vao" x="136" y="330" width="8" height="44"/>
+<rect class="p-vao" x="556" y="250" width="8" height="32"/>
+<rect class="p-vao" x="330" y="396" width="170" height="8"/>
+<rect class="p-vao" x="178" y="396" width="64" height="8"/>
+<path class="p-janela" d="M82 38.5h48M82 41.5h48M212 38.5h48M212 41.5h48M342 38.5h48M342 41.5h48M472 38.5h48M472 41.5h48M330 398.5h170M330 401.5h170M178 398.5h64M178 401.5h64"/>
+<path class="p-porta" d="M56 190V158M88 190A32 32 0 0 0 56 158M186 190V158M218 190A32 32 0 0 0 186 158M316 190V158M348 190A32 32 0 0 0 316 158M446 190V158M478 190A32 32 0 0 0 446 158M60 230v32M92 230A32 32 0 0 1 60 262M560 250h-32M560 282A32 32 0 0 1 528 250"/>
+<g class="p-cota">
+<path d="M40 18h520M40 12v12M170 12v12M300 12v12M430 12v12M560 12v12M18 40v360M12 40h12M12 190h12M12 230h12M12 400h12"/>
+<text x="105.0" y="11">3,25</text>
+<text x="235.0" y="11">3,25</text>
+<text x="365.0" y="11">3,25</text>
+<text x="495.0" y="11">3,25</text>
+<text transform="translate(11 115) rotate(-90)">3,75</text><text transform="translate(11 310) rotate(-90)">4,25</text>
+</g>
+<g class="p-rot">
+<text class="p-nome" x="105.0" y="112">QUARTO 1</text>
+<text class="p-area" x="105.0" y="134">12,2 m²</text>
+<text class="p-nome" x="235.0" y="112">QUARTO 2</text>
+<text class="p-area" x="235.0" y="134">12,2 m²</text>
+<text class="p-nome" x="365.0" y="112">QUARTO 3</text>
+<text class="p-area p-so-dono p-so-dono--q3" x="365.0" y="134">12,2 m²</text>
+<text class="p-area p-so-comum p-so-comum--q3" x="365.0" y="134">uso comum</text>
+<text class="p-nome" x="495.0" y="112">QUARTO 4</text>
+<text class="p-area p-so-dono p-so-dono--q4" x="495.0" y="134">12,2 m²</text>
+<text class="p-area p-so-comum p-so-comum--q4" x="495.0" y="134">uso comum</text>
+<text class="p-nome" x="415" y="312">ESTAR E JANTAR</text><text class="p-area" x="415" y="334">30,8 m²</text>
+<text class="p-nome" x="205" y="312">COZINHA</text><text class="p-area" x="205" y="334">13,8 m²</text>
+<text class="p-nome p-nome--p" x="90" y="285">BANHO</text><text class="p-area" x="90" y="303">5,0 m²</text>
+<text class="p-nome p-nome--p" x="90" y="352">SERVIÇO</text><text class="p-area" x="90" y="372">5,6 m²</text>
+</g>
+<g class="p-selo s1"><circle cx="66" cy="66" r="14"/><text x="66" y="71">A</text></g>
+<g class="p-selo s2"><circle cx="196" cy="66" r="14"/><text x="196" y="71">B</text></g>
+<g class="p-selo s3"><circle cx="326" cy="66" r="14"/><text x="326" y="71">C</text></g>
+<g class="p-selo s4"><circle cx="456" cy="66" r="14"/><text x="456" y="71">D</text></g>
+</svg>
+        <figcaption class="planta-leg">
+          <ul class="legenda" aria-hidden="true">
+            <li class="lg1"><i></i>Pessoa A</li><li class="lg2"><i></i>Pessoa B</li><li class="lg3"><i></i>Pessoa C</li><li class="lg4"><i></i>Pessoa D</li><li class="lg-comum"><i></i>Uso comum</li>
+          </ul>
+          <p class="planta-nota">Planta ilustrativa · 117 m² · <span class="js-n-palavra">três</span> chaves, um contrato</p>
+        </figcaption>
+      </figure>
+
+      <form class="conta-rapida" id="conta-rapida" aria-labelledby="conta-rapida-titulo">
+        <p class="conta-rapida__titulo" id="conta-rapida-titulo">Faça a conta em 10 segundos</p>
+        <div class="campo">
+          <div class="campo__topo">
+            <label for="hq-valor">Valor do imóvel</label>
+            <output class="campo__valor" id="hq-valor-out" for="hq-valor">R$&nbsp;600.000</output>
+          </div>
+          <input class="faixa" id="hq-valor" type="range" min="200000" max="2000000" step="10000" value="600000" data-key="valor" style="--p:22.2%" aria-valuetext="R$ 600.000">
+        </div>
+        <fieldset class="campo">
+          <legend>Pessoas no grupo</legend>
+          <div class="seg">
+            <input type="radio" id="hn2" name="hn" value="2"><label for="hn2">2</label>
+            <input type="radio" id="hn3" name="hn" value="3" checked><label for="hn3">3</label>
+            <input type="radio" id="hn4" name="hn" value="4"><label for="hn4">4</label>
+          </div>
+        </fieldset>
+        <dl class="conta-rapida__res">
+          <div><dt>Sua entrada</dt><dd id="hq-entrada">R$&nbsp;40.000</dd></div>
+          <div><dt>Sua 1ª parcela</dt><dd id="hq-parcela">R$&nbsp;1.902</dd></div>
+        </dl>
+        <p class="conta-rapida__nota">Com 20% de entrada, 30 anos e 11,5% ao ano. Valores ilustrativos.</p>
+        <a class="link" href="#simulador">Ajustar entrada, prazo e juros <span aria-hidden="true">→</span></a>
+      </form>
+    </div>
+
+    <ul class="garantias" aria-label="Garantias">
+      <li>Contratos revisados por advogados imobiliários</li>
+      <li>Escritura em cartório</li>
+      <li>Dados protegidos pela LGPD</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 2. O PROBLEMA, EM NÚMEROS -->
+<section class="secao" id="numeros" aria-labelledby="numeros-titulo">
+  <div class="wrap">
+    <header class="secao__cab revelar">
+      <p class="selo selo--claro">A conta, sem rodeios</p>
+      <h2 id="numeros-titulo">A mesma casa, <em>dividida por três.</em></h2>
+      <p class="secao__sub">Exemplo ilustrativo: imóvel de R$ 600 mil, entrada de 20%, financiamento em 30 anos a 11,5% ao ano pela tabela SAC, sem seguros e taxas, e R$ 1.500 guardados por mês, por pessoa.</p>
+    </header>
+    <ul class="grade grade--3">
+      <li class="cartao comparar revelar">
+        <h3>Tempo para juntar a entrada</h3>
+        <p class="comparar__so"><span>Sozinho</span> <s>6 anos e 8 meses</s></p>
+        <p class="comparar__grupo"><span>Em grupo de 3</span> <strong>2 anos e 3 meses</strong></p>
+      </li>
+      <li class="cartao comparar revelar">
+        <h3>Imóvel que R$&nbsp;40 mil de entrada alcançam</h3>
+        <p class="comparar__so"><span>Sozinho</span> <s>R$&nbsp;200.000</s></p>
+        <p class="comparar__grupo"><span>Em grupo de 3, cada um com R$&nbsp;40 mil</span> <strong>R$&nbsp;600.000</strong></p>
+      </li>
+      <li class="cartao comparar revelar">
+        <h3>ITBI e cartório</h3>
+        <p class="comparar__so"><span>Sozinho</span> <s>R$&nbsp;18 a 30 mil</s></p>
+        <p class="comparar__grupo"><span>Por pessoa, em 3</span> <strong>R$&nbsp;6 a 10 mil</strong></p>
+      </li>
+    </ul>
+    <p class="nota revelar">Valores ilustrativos, calculados com as premissas acima; ITBI e cartório estimados entre 3% e 5% do valor <mark class="ph">[CONFIRMAR POR MUNICÍPIO]</mark>. A conta real depende do banco, da renda e do imóvel.</p>
+  </div>
+</section>
+
+<!-- 3. COMO FUNCIONA -->
+<section class="secao secao--sup" id="como-funciona" aria-labelledby="como-titulo">
+  <div class="wrap">
+    <header class="secao__cab revelar">
+      <p class="selo selo--claro">Como funciona</p>
+      <h2 id="como-titulo">Do perfil à escritura, <em>em quatro passos.</em></h2>
+    </header>
+    <ol class="grade grade--4 passos">
+      <li class="cartao passo revelar">
+        <span class="passo__n" aria-hidden="true">1</span>
+        <h3>Crie seu perfil</h3>
+        <p>Cidade, faixa de orçamento, rotina e planos para os próximos 5 a 10 anos. Você decide o que fica visível.</p>
+      </li>
+      <li class="cartao passo revelar">
+        <span class="passo__n" aria-hidden="true">2</span>
+        <h3>Encontre seu grupo</h3>
+        <p>A compatibilidade considera objetivo, renda e estilo de vida. Vocês conversam no app antes de qualquer compromisso.</p>
+      </li>
+      <li class="cartao passo revelar">
+        <span class="passo__n" aria-hidden="true">3</span>
+        <h3>Simule e escolha o imóvel</h3>
+        <p>Com corretores parceiros, o grupo compara opções sabendo quanto cabe no bolso de cada um.</p>
+      </li>
+      <li class="cartao passo revelar">
+        <span class="passo__n" aria-hidden="true">4</span>
+        <h3>Formalize</h3>
+        <p>Contrato de condomínio voluntário (Código Civil, arts. 1.314 a 1.326) com regras de uso, despesas, saída e direito de preferência. Depois, financiamento e escritura.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4. SIMULADOR -->
+<section class="secao" id="simulador" aria-labelledby="sim-titulo">
+  <div class="wrap">
+    <header class="secao__cab revelar">
+      <p class="selo selo--claro">Simulador</p>
+      <h2 id="sim-titulo">Quanto custa <em>a sua parte?</em></h2>
+      <p class="secao__sub">Ajuste os valores e veja a conta de cada um. A planta acompanha o tamanho do grupo.</p>
+    </header>
+
+    <div class="sim">
+      <div class="sim__resumo" aria-hidden="true"><span>Sua parte</span> <strong id="rs-entrada">R$&nbsp;40.000</strong> <span>de entrada ·</span> <strong id="rs-parcela">R$&nbsp;1.902</strong><span>/mês</span></div>
+      <form class="cartao sim__form" id="sim-form" novalidate aria-describedby="sim-aviso">
+        <div class="campo">
+          <div class="campo__topo">
+            <label for="sim-valor-r">Valor do imóvel</label>
+            <span class="campo__num"><span aria-hidden="true">R$</span><input id="sim-valor" type="text" inputmode="numeric" value="600.000" aria-label="Valor do imóvel, em reais" autocomplete="off" data-key="valor" data-min="200000" data-max="2000000"></span>
+          </div>
+          <input class="faixa" id="sim-valor-r" type="range" min="200000" max="2000000" step="10000" value="600000" data-key="valor" style="--p:22.2%" aria-valuetext="R$ 600.000">
+          <div class="campo__escala" aria-hidden="true"><span>R$ 200 mil</span><span>R$ 2 milhões</span></div>
+        </div>
+
+        <fieldset class="campo">
+          <legend>Quantas pessoas no grupo?</legend>
+          <div class="seg">
+            <input type="radio" id="sim-n2" name="n" value="2"><label for="sim-n2">2</label>
+            <input type="radio" id="sim-n3" name="n" value="3" checked><label for="sim-n3">3</label>
+            <input type="radio" id="sim-n4" name="n" value="4"><label for="sim-n4">4</label>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <div class="campo__topo">
+            <label for="sim-entrada-r">Entrada</label>
+            <span class="campo__num"><input id="sim-entrada" type="text" inputmode="numeric" value="20" aria-label="Entrada, em porcentagem do valor" autocomplete="off" data-key="entrada" data-min="20" data-max="60"><span aria-hidden="true">%</span></span>
+          </div>
+          <input class="faixa" id="sim-entrada-r" type="range" min="20" max="60" step="1" value="20" data-key="entrada" style="--p:0%" aria-valuetext="20%">
+          <div class="campo__escala" aria-hidden="true"><span>20%</span><span>60%</span></div>
+        </div>
+
+        <div class="campo">
+          <div class="campo__topo">
+            <label for="sim-prazo-r">Prazo</label>
+            <span class="campo__num"><input id="sim-prazo" type="text" inputmode="numeric" value="30" aria-label="Prazo, em anos" autocomplete="off" data-key="prazo" data-min="5" data-max="35"><span aria-hidden="true">anos</span></span>
+          </div>
+          <input class="faixa" id="sim-prazo-r" type="range" min="5" max="35" step="1" value="30" data-key="prazo" style="--p:83.3%" aria-valuetext="30 anos">
+          <div class="campo__escala" aria-hidden="true"><span>5 anos</span><span>35 anos</span></div>
+        </div>
+
+        <div class="campo campo--linha">
+          <label for="sim-juros">Juros ao ano</label>
+          <span class="campo__num"><input id="sim-juros" type="text" inputmode="decimal" value="11,5" autocomplete="off"><span aria-hidden="true">%</span></span>
+        </div>
+      </form>
+
+      <div class="cartao sim__res" role="region" aria-labelledby="sim-res-titulo">
+        <h3 id="sim-res-titulo" class="sr">Resultado da simulação</h3>
+        <div class="sim__planta" id="sim-planta" aria-hidden="true"></div>
+        <dl class="kpis">
+          <div class="kpi">
+            <dt>Entrada por pessoa</dt>
+            <dd><strong id="out-entrada">R$&nbsp;40.000</strong><span>sozinho: <span id="out-entrada-so">R$&nbsp;120.000</span></span></dd>
+          </div>
+          <div class="kpi">
+            <dt>1ª parcela por pessoa</dt>
+            <dd><strong id="out-parcela">R$&nbsp;1.902</strong><span>sozinho: <span id="out-parcela-so">R$&nbsp;5.707</span></span></dd>
+          </div>
+          <div class="kpi kpi--largo">
+            <dt>ITBI e cartório, por pessoa</dt>
+            <dd><strong id="out-custos">R$&nbsp;6.000 a R$&nbsp;10.000</strong><span>estimativa de 3% a 5% do valor <mark class="ph">[CONFIRMAR POR MUNICÍPIO]</mark></span></dd>
+          </div>
+        </dl>
+
+        <svg class="barras" viewBox="0 0 320 132" role="img" aria-labelledby="barras-titulo">
+          <title id="barras-titulo">Comparação: o que cada pessoa paga em grupo é uma fração do que pagaria sozinha.</title>
+          <text class="barras__rot" x="0" y="12">Entrada</text>
+          <rect class="barras__trilho" x="0" y="20" width="320" height="14" rx="7"/>
+          <rect class="barras__cheia" id="barra-entrada" x="0" y="20" width="320" height="14" rx="7"/>
+          <text class="barras__rot" x="0" y="72">1ª parcela</text>
+          <rect class="barras__trilho" x="0" y="80" width="320" height="14" rx="7"/>
+          <rect class="barras__cheia" id="barra-parcela" x="0" y="80" width="320" height="14" rx="7"/>
+          <g class="barras__leg"><rect x="0" y="116" width="12" height="12" rx="3" class="barras__trilho"/><text x="18" y="126">sozinho</text><rect x="92" y="116" width="12" height="12" rx="3" class="barras__chave"/><text x="110" y="126" id="barras-leg-grupo">por pessoa, em 3</text></g>
+        </svg>
+
+        <p class="sr" id="sim-vivo" aria-live="polite"></p>
+        <p class="nota" id="sim-aviso"><strong>Simulação ilustrativa. Não é proposta de crédito.</strong> Parcela pela tabela SAC, sem os seguros obrigatórios (MIP e DFI) e sem as taxas do banco.</p>
+        <noscript><p class="nota">Com o JavaScript desativado, o resultado mostra o exemplo padrão.</p></noscript>
+        <a class="btn btn--cheio" href="#lista" data-track="simulator_complete">Quero encontrar meu grupo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. E SE...? -->
+<section class="secao secao--painel" id="seguranca" aria-labelledby="seg-titulo">
+  <div class="wrap">
+    <div class="painel painel--escuro">
+      <header class="secao__cab revelar">
+        <p class="selo">Segurança jurídica</p>
+        <h2 id="seg-titulo">E se…? <em>Tudo por escrito, antes da compra.</em></h2>
+      </header>
+      <ul class="grade grade--2">
+        <li class="ese revelar">
+          <h3>E se alguém quiser sair?</h3>
+          <p>O contrato define prazo de aviso, como o imóvel é avaliado e quem pode comprar a parte: primeiro os outros coproprietários, que têm direito de preferência (Código Civil, art. 504), depois terceiros aprovados pelo grupo.</p>
+          <p class="ese__tag">Cláusula de saída</p>
+        </li>
+        <li class="ese revelar">
+          <h3>E se alguém parar de pagar?</h3>
+          <p>Perante o banco, todos respondem pela dívida. Por isso o contrato prevê um fundo de reserva comum, um prazo de tolerância e o que acontece com a parte de quem deixa de pagar.</p>
+          <p class="ese__tag">Cláusula de inadimplência</p>
+        </li>
+        <li class="ese revelar">
+          <h3>E se a gente brigar?</h3>
+          <p>Regras de convivência escritas desde o início, sobre visitas, reformas, animais e silêncio, e mediação obrigatória antes de qualquer processo.</p>
+          <p class="ese__tag">Cláusula de convivência e mediação</p>
+        </li>
+        <li class="ese revelar">
+          <h3>E se um de nós casar, ou morrer?</h3>
+          <p>O seguro habitacional obrigatório quita a parte da dívida de quem falece, na proporção da renda informada. O contrato define como um cônjuge entra no arranjo e como os demais podem comprar a parte dos herdeiros.</p>
+          <p class="ese__tag">Cláusula de sucessão</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PARA QUEM É -->
+<section class="secao" id="para-quem" aria-labelledby="quem-titulo">
+  <div class="wrap">
+    <header class="secao__cab revelar">
+      <p class="selo selo--claro">Para quem é</p>
+      <h2 id="quem-titulo">Para quem quer morar no que é seu, <em>sem esperar sozinho.</em></h2>
+    </header>
+    <ul class="grade grade--4">
+      <li class="cartao quem revelar">
+        <span class="quem__ico" aria-hidden="true"><svg viewBox="0 0 96 64"><circle cx="30" cy="34" r="17" class="f1"/><circle cx="50" cy="28" r="17" class="f2"/><circle cx="68" cy="38" r="15" class="f3"/></svg></span>
+        <h3>Amigos</h3>
+        <p>que cansaram de pagar o aluguel de um apartamento que nunca vai ser deles.</p>
+      </li>
+      <li class="cartao quem revelar">
+        <span class="quem__ico" aria-hidden="true"><svg viewBox="0 0 96 64"><circle cx="38" cy="32" r="17" class="f2"/><circle cx="60" cy="32" r="17" class="f2 f-leve"/></svg></span>
+        <h3>Irmãos</h3>
+        <p>que querem sair da casa dos pais sem que isso leve dez anos.</p>
+      </li>
+      <li class="cartao quem revelar">
+        <span class="quem__ico" aria-hidden="true"><svg viewBox="0 0 96 64"><rect x="26" y="12" width="19" height="19" rx="5" class="f4"/><rect x="51" y="12" width="19" height="19" rx="5" class="f1"/><rect x="26" y="35" width="19" height="19" rx="5" class="f3"/><rect x="51" y="35" width="19" height="19" rx="5" class="f2"/></svg></span>
+        <h3>Colegas de trabalho</h3>
+        <p>com a mesma rotina, a mesma região e o mesmo cansaço do trânsito.</p>
+      </li>
+      <li class="cartao quem revelar">
+        <span class="quem__ico" aria-hidden="true"><svg viewBox="0 0 96 64"><path d="M34 32h28" class="f-linha"/><circle cx="27" cy="32" r="13" class="f3"/><path d="M70 17l15 28H55z" class="f4"/></svg></span>
+        <h3>Desconhecidos</h3>
+        <p>com o mesmo plano. Aqui, o que aproxima as pessoas é o objetivo, e não o acaso.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. PROVA SOCIAL -->
+<section class="secao secao--sup" id="prova" aria-labelledby="prova-titulo">
+  <div class="wrap">
+    <header class="secao__cab revelar">
+      <p class="selo selo--claro">Quem já entrou</p>
+      <h2 id="prova-titulo">Gente que comprou junto <em>e conta como foi.</em></h2>
+      <p class="contador"><span class="contador__n"><mark class="ph">[DADO A CONFIRMAR]</mark> <strong>lares formados</strong></span> <span>pela Entre</span></p>
+    </header>
+    <ul class="grade grade--3">
+      <li class="cartao depo revelar">
+        <blockquote><p><mark class="ph">[DEPOIMENTO REAL]</mark> Uma frase curta, concreta, sobre o momento em que a compra deixou de parecer impossível.</p></blockquote>
+        <p class="depo__quem"><span class="avatar" aria-hidden="true">AB</span><span>Nome, idade · Cidade<br><small>Comprou em grupo de 3</small></span></p>
+      </li>
+      <li class="cartao depo revelar">
+        <blockquote><p><mark class="ph">[DEPOIMENTO REAL]</mark> Um relato sobre o contrato: a dúvida que existia antes e como ela foi respondida.</p></blockquote>
+        <p class="depo__quem"><span class="avatar avatar--2" aria-hidden="true">CD</span><span>Nome, idade · Cidade<br><small>Comprou em grupo de 2</small></span></p>
+      </li>
+      <li class="cartao depo revelar">
+        <blockquote><p><mark class="ph">[DEPOIMENTO REAL]</mark> Uma observação sobre a convivência, meses depois da mudança.</p></blockquote>
+        <p class="depo__quem"><span class="avatar avatar--3" aria-hidden="true">EF</span><span>Nome, idade · Cidade<br><small>Comprou em grupo de 4</small></span></p>
+      </li>
+    </ul>
+    <ul class="logos revelar" aria-label="Parceiros">
+      <li>[LOGO PARCEIRO]</li><li>[LOGO PARCEIRO]</li><li>[LOGO PARCEIRO]</li><li>[LOGO PARCEIRO]</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. PERGUNTAS FREQUENTES -->
+<section class="secao" id="perguntas" aria-labelledby="faq-titulo">
+  <div class="wrap wrap--texto">
+    <header class="secao__cab revelar">
+      <p class="selo selo--claro">Perguntas frequentes</p>
+      <h2 id="faq-titulo">O que todo mundo pergunta <em>antes de entrar.</em></h2>
+    </header>
+    <div class="faq">
+      <details>
+        <summary>Dá para financiar com quem não é da família?</summary>
+        <p>Alguns bancos aceitam compor a renda de pessoas sem parentesco no mesmo financiamento. As regras mudam conforme o banco e a linha de crédito, e a Entre indica, antes de tudo, quais caminhos estão abertos para o seu grupo. <mark class="ph">[CONFIRMAR COM BANCOS PARCEIROS]</mark></p>
+      </details>
+      <details>
+        <summary>Qual é a diferença entre copropriedade e multipropriedade?</summary>
+        <p>Na copropriedade, o condomínio voluntário do Código Civil, cada pessoa é dona de uma fração do imóvel inteiro, e o uso é combinado em contrato. Na multipropriedade (Lei 13.777/2018), cada pessoa é dona de um período de tempo, modelo comum em imóveis de férias. A Entre trabalha com a copropriedade, para moradia.</p>
+      </details>
+      <details>
+        <summary>Quanto a Entre cobra, e quando?</summary>
+        <p><mark class="ph">[MODELO DE COBRANÇA A DEFINIR]</mark> Todos os custos aparecem antes de qualquer compromisso, para que o grupo decida com a conta inteira à vista.</p>
+      </details>
+      <details>
+        <summary>Como dividimos quartos, IPTU e condomínio?</summary>
+        <p>Tudo fica escrito antes da compra: quem usa cada cômodo, como funcionam as áreas comuns e a proporção das despesas, que pode seguir a fração de cada um ou um acordo diferente, desde que todos assinem.</p>
+      </details>
+      <details>
+        <summary>Quem vê meus dados?</summary>
+        <p>Seu perfil mostra só o que você escolher. Renda e documentos são compartilhados apenas com o grupo, e apenas quando todos decidirem avançar, conforme a LGPD.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CTA FINAL -->
+<section class="secao secao--painel" id="lista" aria-labelledby="lista-titulo">
+  <div class="wrap">
+    <div class="painel painel--laranja final">
+      <div class="final__texto revelar">
+        <p class="selo">Lista de espera</p>
+        <h2 id="lista-titulo">Sua parte da casa <em>começa aqui.</em></h2>
+        <p class="final__sub">Deixe seu contato. Avisamos quando houver grupos se formando na sua cidade.</p>
+        <a class="btn btn--vidro" href="https://wa.me/5500000000000" rel="noopener" data-track="whatsapp_click">
+          <svg class="ico-zap" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c.3 2.9 2.6 5.2 5.5 5.5l1-1.4-1.6-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-1.6z" class="ico-zap__fone"/></svg>
+          Falar no WhatsApp
+        </a>
+        <p class="final__ph"><mark class="ph ph--claro">[NÚMERO DE WHATSAPP A PREENCHER]</mark></p>
+      </div>
+
+      <form class="inscricao" id="inscricao" action="#lista" method="post" aria-labelledby="lista-titulo">
+        <div class="inscricao__campos">
+          <div class="entrada">
+            <label for="f-nome">Nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required aria-describedby="e-nome">
+            <p class="entrada__erro" id="e-nome" hidden>Diga como podemos chamar você.</p>
+          </div>
+          <div class="entrada">
+            <label for="f-zap">WhatsApp</label>
+            <input id="f-zap" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(11) 91234-5678" required pattern="\(\d{2}\) \d{4,5}-\d{4}" aria-describedby="e-zap">
+            <p class="entrada__erro" id="e-zap" hidden>Use DDD e número, por exemplo (11) 91234-5678.</p>
+          </div>
+          <div class="entrada">
+            <label for="f-cidade">Cidade</label>
+            <input id="f-cidade" name="cidade" type="text" autocomplete="address-level2" required aria-describedby="e-cidade">
+            <p class="entrada__erro" id="e-cidade" hidden>Informe a cidade onde quer morar.</p>
+          </div>
+          <div class="entrada">
+            <label for="f-faixa">Orçamento para a sua parte</label>
+            <select id="f-faixa" name="faixa" required aria-describedby="e-faixa">
+              <option value="">Escolha uma faixa</option>
+              <option>Até R$ 150 mil</option>
+              <option>R$ 150 mil a R$ 300 mil</option>
+              <option>R$ 300 mil a R$ 500 mil</option>
+              <option>Acima de R$ 500 mil</option>
+            </select>
+            <p class="entrada__erro" id="e-faixa" hidden>Escolha uma faixa, mesmo que aproximada.</p>
+          </div>
+        </div>
+        <div class="aceite">
+          <input id="f-lgpd" name="lgpd" type="checkbox" required aria-describedby="e-lgpd">
+          <label for="f-lgpd">Autorizo a Entre a usar estes dados para me contatar sobre grupos e imóveis, conforme a <a href="#privacidade">Política de Privacidade</a>. Posso cancelar quando quiser.</label>
+        </div>
+        <p class="entrada__erro" id="e-lgpd" hidden>Precisamos da sua autorização para entrar em contato.</p>
+        <button class="btn btn--cheio" type="submit">Entrar na lista</button>
+        <p class="inscricao__ok" id="inscricao-ok" role="status" hidden>Pronto, você está na lista. Vamos falar com você pelo WhatsApp.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape" id="privacidade">
+  <div class="wrap rodape__grade">
+    <div>
+      <p class="marca marca--rodape"><svg class="marca__ico" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M10 26V14a6 6 0 0 1 12 0v12"/><circle cx="19" cy="20" r="1.6"/></svg><span>Entre</span></p>
+      <p>Casa própria em grupo, com contrato e segurança.</p>
+    </div>
+    <div class="rodape__legal">
+      <p><mark class="ph ph--claro">[RAZÃO SOCIAL A PREENCHER]</mark></p>
+      <p>CNPJ <mark class="ph ph--claro">[A PREENCHER]</mark> · CRECI <mark class="ph ph--claro">[A PREENCHER]</mark></p>
+      <p><a href="#privacidade">Política de Privacidade</a> · <a href="#privacidade">Termos de Uso</a> · <a href="mailto:contato@exemplo.com.br">contato@exemplo.com.br</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="doca" id="doca" aria-hidden="true">
+  <a class="btn btn--cheio" id="doca-link" href="#simulador" tabindex="-1" data-track="cta_dock_click">Simular minha parte</a>
+  <a class="doca__zap" href="https://wa.me/5500000000000" tabindex="-1" rel="noopener" data-track="whatsapp_click" aria-label="Falar no WhatsApp"><svg class="ico-zap" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c.3 2.9 2.6 5.2 5.5 5.5l1-1.4-1.6-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-1.6z" class="ico-zap__fone"/></svg></a>
+</div>
+
+<script src="animations.js" defer></script>
+</body>
+</html>
